@@ -1,0 +1,24 @@
+Setup Kubernetes on GCP:
+
+Setup on local system
+
+1. Install gcloud
+
+2. gcloud components list
+
+3. Install required components
+
+gcloud components install kubectl
+
+// " alpha
+// " beta
+
+4. gcloud container clusters get-credentials ct-cluster-1
+
+5. kubectl run hello-server --image gcr.io/google-samples/hello-app:1.0 --port 8080
+
+6. kubectl expose deployment hello-server --type "LoadBalancer"
+
+7. kubectl get service hello-server
+
+Got instructions finally from here: https://cloud.google.com/kubernetes-engine/docs/quickstart
